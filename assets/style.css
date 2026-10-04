@@ -198,8 +198,12 @@ body { background: linear-gradient(180deg,#ecfeff 0%,#fff7ed 100%); background-a
 
 /* رموز رياضية: أس وجذر */
 .eq sup, sup { font-size: .65em; vertical-align: super; line-height: 0; margin: 0 1px; }
-.sqrt { display: inline-flex; align-items: flex-start; unicode-bidi: isolate; direction: rtl; white-space: nowrap; }
-.sqrt .rad { border-top: 2px solid currentColor; padding: 0 2px; margin-top: .12em; line-height: 1.15; }
+.sqrt { display: inline-flex; align-items: stretch; direction: ltr; unicode-bidi: isolate; white-space: nowrap; vertical-align: middle; margin: 0 2px; }
+.sqrt-sign { display: inline-block; width: .62em; min-height: 1.25em; flex-shrink: 0; margin-left: -1px; background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 24' preserveAspectRatio='none'%3E%3Cpath d='M1 13.2 L3.4 12 L6.4 22.6 L11.4 1.1 L12 1.1' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 24' preserveAspectRatio='none'%3E%3Cpath d='M1 13.2 L3.4 12 L6.4 22.6 L11.4 1.1 L12 1.1' fill='none' stroke='black' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%; }
+.sqrt .rad { direction: ltr; unicode-bidi: isolate; border-top: 2.1px solid currentColor; border-top-right-radius: 1px; padding: .08em .2em 0 .15em; line-height: 1.15; margin-left: -1px; }
+.frac .sqrt { font-size: 1em; }
+.sqrt .rad.rad-rtl { direction: rtl; }
 .q-img { display: block; max-height: 240px; }
 .q-img-sm { display: block; max-height: 175px; }
 .goal-target, .game-bubble, .horizontal-target, .match-item { line-height: 1.35; }

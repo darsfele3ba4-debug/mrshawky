@@ -102,7 +102,7 @@ function toAr(s) {
 }
 // ^[..] أس ، √[..] جذر تربيعى
 function marks(s) {
-    s = s.replace(/√\[([^\[\]]+)\]/g, '<span class="sqrt">√<span class="rad">$1</span></span>');
+    s = s.replace(/√\[([^\[\]]+)\]/g, (m, r) => '<span class="sqrt"><i class="sqrt-sign"></i><span class="rad' + (/\s/.test(r) ? ' rad-rtl' : '') + '">' + r + '</span></span>');
     s = s.replace(/\^\[([^\[\]]+)\]/g, '<sup>$1</sup>');
     return s;
 }
